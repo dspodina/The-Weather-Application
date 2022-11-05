@@ -14,20 +14,19 @@ button.onclick = function () {
           fetch(weatherUrl)
             .then((j) => j.json())
             .then((data) => {
-                let container = document.querySelector('.container')
-                data.list.forEach(element => {
-                    let card = renderWeatherCard(element)
-                    container.append (card)
-                });
+              let container = document.querySelector(".container");
+              data.list.forEach((element) => {
+                let card = renderWeatherCard(element);
+                container.append(card);
+              });
             });
         }
       });
   }
 };
-function renderWeatherCard(item){
-    let holder = document.createElement('div')
-    holder.className = 'holder'
-    holder.innerText = `tempeture is ${item.main.temp} and it is ${item.weather[0].description}`
-    return holder
+function renderWeatherCard(item) {
+  let holder = document.createElement("div");
+  holder.className = "holder";
+  holder.innerText = `tempeture is ${item.main.temp} and it is ${item.weather[0].description}`;
+  return holder;
 }
-
