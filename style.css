@@ -6,6 +6,9 @@
   transition: 0.3s;
   width: 18%;
 }
+h1 {
+  font-size: 30px;
+}
 .cityName {
   text-transform: uppercase;
   text-align: center;
